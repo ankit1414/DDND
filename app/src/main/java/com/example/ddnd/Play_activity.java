@@ -56,12 +56,8 @@ public class Play_activity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-
             }
         });
-
-
-
     }
     public void createQuestions(){
         questions.add("What is your name?");
