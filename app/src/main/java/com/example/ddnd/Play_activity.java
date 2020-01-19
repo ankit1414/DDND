@@ -2,6 +2,7 @@ package com.example.ddnd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,6 +50,11 @@ public class Play_activity extends AppCompatActivity {
                     if(i ==questions.size()-1){
                         next_button.setText("submit");
                     }
+                }
+                else{
+                    Intent intent = new Intent(Play_activity.this , Quiz_activity.class);
+                    startActivity(intent);
+                    finish();
                 }
 
             }
