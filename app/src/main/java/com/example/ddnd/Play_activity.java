@@ -64,6 +64,8 @@ public class Play_activity extends AppCompatActivity {
                             next_button.setText("submit");
                         }
                     }
+                }
+
                     else{
                         String ans = answer_et.getText().toString().trim();
                         answers.add(ans);
@@ -73,7 +75,6 @@ public class Play_activity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }
-
 
                 }
             }
