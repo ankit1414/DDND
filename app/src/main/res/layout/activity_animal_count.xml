@@ -1,69 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212"
-    tools:context=".animal_count"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
-    >
+    android:orientation="vertical"
+    tools:context=".animal_count">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:text="Now try to remember as many as animals in 3 min and write it down on a paper. Stop the timer if you can't remember"
         android:textColor="@android:color/holo_blue_bright"
-        android:gravity="center_horizontal"
-        android:textSize="20sp"
-        />
+        android:textSize="20sp" />
 
     <ticker.views.com.ticker.widgets.circular.timer.view.CircularView
         android:id="@+id/circular_view"
-        android:textColor="@android:color/holo_blue_bright"
         android:layout_width="88dp"
         android:layout_height="92dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@android:color/holo_blue_bright"
         app:m_arc_stroke_color="@android:color/white"
         app:m_cicle_stroke_width="25"
         app:m_circle_radius="70"
-        android:layout_marginTop="50dp"
-        app:m_circle_stroke_color="@android:color/background_dark"/>
+        app:m_circle_stroke_color="@android:color/background_dark" />
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
         android:id="@+id/btnStart"
-        />
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stop"
+        android:text="Start" />
+
+    <Button
         android:id="@+id/btnStop"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="How many did you get?"
-        android:gravity="center"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        />
-    <EditText
-        android:id="@+id/etAnswer"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:hint=" Answer "
-        android:layout_height="wrap_content"
         android:gravity="center"
-        android:background="@android:color/darker_gray"/>
+        android:text="How many did you get?"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="20sp" />
+
     <Button
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        android:text="+1" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center_horizontal"
+        android:text="0" />
+
+    <Button
         android:id="@+id/btnSubmit"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
 
 </LinearLayout>
