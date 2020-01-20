@@ -44,26 +44,26 @@
     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:id="@+id/parent_rl">
 
         <Button
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_margin="50dp"
             android:textSize="20sp"
             android:text="Play"
             android:elevation="100dp"
+            android:layout_centerInParent="true"
             android:translationZ="100dp"
             android:id="@+id/play_button"
             android:background="@drawable/playbutton_round"/>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>

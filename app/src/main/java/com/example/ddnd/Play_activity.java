@@ -78,6 +78,7 @@ public class Play_activity extends AppCompatActivity {
                 }
             }
         });
+       
     }
     public void createQuestions(){
         questions.add("What is your name?");
