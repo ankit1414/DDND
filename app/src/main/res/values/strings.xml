@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">DDND</string>
-    <string name="aboutApp">this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the app this is about the appthisthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about this is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the appthis is about the app this is about the app the app this is about the appthis is about the app this is about the app is about the app this is about the app </string>
-
+      <string name="aboutApp">
+        This is an android application made by Aliencode-R and Ant!k for detection of alzheimer disease by some practical quizzes. </string>
 </resources>

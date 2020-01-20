@@ -4,10 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:gravity="center"
     android:layout_height="match_parent"
     android:background="#121212"
     tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alzheimer's disease"
+        android:textSize="40sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Alzheimer's disease is an irreversible, progressive brain disorder that slowly destroys memory and thinking skills and, eventually, the ability to carry out the simplest tasks."
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Symptoms:"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Memory loss and confusion"
+        android:textColor="@color/colorPrimary"/>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Take a digitalized test to evaluate your risks"
+    android:textColor="@color/colorAccent"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -25,25 +57,8 @@
             android:id="@+id/play_button"
             android:background="@drawable/homescreen_buttons"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="20sp"
-            android:text="About"
-            android:id="@+id/about_button"
-            android:background="@drawable/homescreen_buttons"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="20sp"
-            android:text="Exit"
-            android:id="@+id/exit_button"
-            android:background="@drawable/homescreen_buttons"/>
-
-
 
     </LinearLayout>
+
 
 </LinearLayout>
