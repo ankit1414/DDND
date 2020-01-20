@@ -2,10 +2,12 @@ package com.example.ddnd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import ticker.views.com.ticker.widgets.circular.timer.callbacks.CircularViewCallback;
@@ -14,22 +16,27 @@ import ticker.views.com.ticker.widgets.circular.timer.view.CircularView;
 public class animal_count extends AppCompatActivity {
 
     CircularView circularViewWithTimer;
-    Button btnStart, btnStop;
-    EditText etAnswer;
+    TextView tvTotal;
+    Button btnAdd, btnStart, btnStop ,btnSubmit;
+    boolean flag = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal_count);
-
+        tvTotal = findViewById(R.id.tvTotal);
         btnStart = findViewById(R.id.btnStart);
         btnStop = findViewById(R.id.btnStop);
-        etAnswer = findViewById(R.id.etAnswer);
+        btnAdd = findViewById(R.id.btnAdd);
+        btnSubmit = findViewById(R.id.btnSubmit);
+//        etAnswer = findViewById(R.id.etAnswer);
         circularViewWithTimer = findViewById(R.id.circular_view);
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 circularViewWithTimer.startTimer();
+                flag = true;
             }
         });
 
@@ -37,8 +44,27 @@ public class animal_count extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 circularViewWithTimer.stopTimer();
+                flag = false;
             }
         });
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(animal_count.this , Dog_first.class);
+                startActivity(intent);
+            }
+        });
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(flag){
+                int current = Integer.parseInt(tvTotal.getText().toString());
+                current++;
+                tvTotal.setText(current+"");
+            }}
+        });
+
 
         CircularView.OptionsBuilder builderWithTimer =
                 new CircularView.OptionsBuilder()

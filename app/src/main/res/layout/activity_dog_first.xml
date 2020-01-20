@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".Dog_first">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Now Try to remember the respective dog names. We may ask you these later."
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/ivBruno"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/bruno" />
+
+    <TextView
+        android:id="@+id/tvBruno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/ivBruno"
+        android:text="Bruno"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="50dp" />
+
+    <ImageView
+
+        android:id="@+id/ivStaggy"
+        android:layout_width="220dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="180sp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/staggy" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBruno"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="65dp"
+        android:text="Staggy"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="50dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="340dp"
+        android:src="@drawable/mars" />
+
+    <TextView
+        android:id="@+id/tvMars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="345dp"
+        android:layout_toRightOf="@id/ivBruno"
+        android:text="Mars"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="50dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="460dp"
+        android:src="@drawable/max" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMars"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="65dp"
+        android:text="Max"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="50dp" />
+</RelativeLayout>
