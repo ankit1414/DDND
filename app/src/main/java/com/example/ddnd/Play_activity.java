@@ -66,17 +66,17 @@ public class Play_activity extends AppCompatActivity {
                     }
                 }
 
-                    else{
-                        String ans = answer_et.getText().toString().trim();
-                        answers.add(ans);
-                        handleResponses();
-                        Toast.makeText(Play_activity.this , "score = "+score , Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(Play_activity.this , Quiz_activity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-
+                else{
+                    String ans = answer_et.getText().toString().trim();
+                    answers.add(ans);
+                    handleResponses();
+                    Toast.makeText(Play_activity.this , "score = "+score , Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Play_activity.this , Quiz_activity.class);
+                    startActivity(intent);
+                    finish();
                 }
+
+
             }
         });
        
