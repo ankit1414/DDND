@@ -2,65 +2,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     android:background="#121212"
+    android:orientation="vertical"
+    android:padding="8dp"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Alzheimer's Disease"
-        android:textSize="40sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textColor="@color/colorAccent"/>
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
         android:text="Alzheimer's disease is an irreversible, progressive brain disorder that slowly destroys memory and thinking skills and, eventually, the ability to carry out the simplest tasks."
-        android:textColor="@color/colorPrimary"/>
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Symptoms:"
         android:textColor="@color/colorAccent"
-        android:textSize="20dp"/>
+        android:textSize="20dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
         android:text="Memory loss and confusion"
-        android:textColor="@color/colorPrimary"/>
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Take a digitalized test to evaluate your risks"
-    android:textColor="@color/colorAccent"
-    android:layout_marginTop="10dp"
-    android:textSize="20sp"
-    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Take a digitalized test to evaluate your risks"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
 
 
     <RelativeLayout
+        android:id="@+id/parent_rl"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="10dp"
-        android:id="@+id/parent_rl">
+        android:padding="10dp">
 
         <Button
+            android:id="@+id/play_button"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="20sp"
-            android:text="Play"
-            android:elevation="100dp"
             android:layout_centerInParent="true"
-            android:translationZ="100dp"
-            android:id="@+id/play_button"
-            android:background="@drawable/playbutton_round"/>
+            android:background="@drawable/playbutton_round"
+            android:elevation="100dp"
+            android:text="Play"
+            android:textSize="20sp"
+            android:translationZ="100dp" />
 
 
     </RelativeLayout>

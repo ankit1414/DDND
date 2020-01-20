@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/about_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/about_tv"
-            android:textSize="20sp"
-            android:text="@string/aboutApp"
-            android:padding="10dp"
             android:background="#121241"
-            android:textColor="@android:color/white"/>
+            android:padding="10dp"
+            android:text="@string/aboutApp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
