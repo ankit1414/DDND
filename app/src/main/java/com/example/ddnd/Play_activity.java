@@ -7,14 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class Play_activity extends AppCompatActivity {
     private ArrayList<String> questions = new ArrayList<>();
+    private ArrayList<String> answers = new ArrayList<>();
     private int i=0;
+    int score =0;
+    boolean skip = false;
 
     private TextView question_tv,dontremember;
     private EditText answer_et;
@@ -38,37 +45,63 @@ public class Play_activity extends AppCompatActivity {
         dontremember.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Play_activity.this , "skip clicked" , Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Play_activity.this , "skip clicked" , Toast.LENGTH_SHORT).show();
+                skip = true;
                 next_button.callOnClick();
             }
         });
         next_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!(i == questions.size()-1)){
-                    question_tv.setText(questions.get(++i));
-                    if(i ==questions.size()-1){
-                        next_button.setText("submit");
+                if(!answer_et.getText().toString().isEmpty() || skip == true){
+                    skip = false;
+                    if(!(i == questions.size()-1)){
+                        String ans = answer_et.getText().toString().trim();
+                        answers.add(ans);
+                        answer_et.setText("");
+                        question_tv.setText(questions.get(++i));
+                        if(i ==questions.size()-1){
+                            next_button.setText("submit");
+                        }
                     }
                 }
-//                else{
-//                    Intent intent = new Intent(Play_activity.this , Quiz_activity.class);
-//                    startActivity(intent);
-//                    finish();
-//                }
-                  else{
-                    Intent intent = new Intent(Play_activity.this , animal_count.class);
-                    startActivity(intent);
-                    finish();
+
+                    else{
+                        String ans = answer_et.getText().toString().trim();
+                        answers.add(ans);
+                        handleResponses();
+                        Toast.makeText(Play_activity.this , "score = "+score , Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Play_activity.this , Quiz_activity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+
                 }
             }
         });
+       
     }
     public void createQuestions(){
         questions.add("What is your name?");
         questions.add("What date is today?");
         questions.add("What day is today?");
-        questions.add("Which season is this?");
-        questions.add("Which city you are in?");
+//        questions.add("Which season is this?");
+//        questions.add("Which city you are in?");
     }
+    private void handleResponses(){
+        if(!answers.get(0).equals(""))
+            score++;
+
+        String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+
+        if(answers.get(1).equals(currentDate))
+            score++;
+
+        String dayOfTheWeek = new SimpleDateFormat("EEEE").format(new Date());
+
+        if(answers.get(2).equalsIgnoreCase(dayOfTheWeek))
+            score++;
+
+    }
+
 }

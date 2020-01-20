@@ -5,13 +5,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
     android:background="#121212"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alzheimer's disease"
+        android:text="Alzheimer's Disease"
         android:textSize="40sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@color/colorAccent"/>
@@ -38,27 +39,31 @@
     android:layout_height="wrap_content"
     android:text="Take a digitalized test to evaluate your risks"
     android:textColor="@color/colorAccent"
+    android:layout_marginTop="10dp"
+    android:textSize="20sp"
     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:id="@+id/parent_rl">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:textSize="20sp"
             android:text="Play"
+            android:elevation="100dp"
+            android:layout_centerInParent="true"
+            android:translationZ="100dp"
             android:id="@+id/play_button"
-            android:background="@drawable/homescreen_buttons"/>
+            android:background="@drawable/playbutton_round"/>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>
