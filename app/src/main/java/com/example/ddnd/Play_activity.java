@@ -51,8 +51,13 @@ public class Play_activity extends AppCompatActivity {
                         next_button.setText("submit");
                     }
                 }
-                else{
-                    Intent intent = new Intent(Play_activity.this , Quiz_activity.class);
+//                else{
+//                    Intent intent = new Intent(Play_activity.this , Quiz_activity.class);
+//                    startActivity(intent);
+//                    finish();
+//                }
+                  else{
+                    Intent intent = new Intent(Play_activity.this , animal_count.class);
                     startActivity(intent);
                     finish();
                 }
