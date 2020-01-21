@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".Last_activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_orange_light"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:text="Test completed !"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_orange_light" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/holo_blue_bright"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:text="Following is the percentage you are likely to have alzheimer's disease :"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:id="@+id/tvPercentage"
+        android:background="@android:color/holo_purple"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="100sp"/>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expert Review:"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_orange_dark"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/tvReview"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:background="@android:color/background_light"
+            android:text="Normal"/>
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Condition"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_orange_dark"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="We hope that this test has helped you to gain insights of your condition and you will take actions accordingly."/>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnSubmit"
+    android:layout_marginTop="15dp"
+    android:background="@color/colorPrimary"
+    android:text="Take me to Home Page"
+    android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+</LinearLayout>

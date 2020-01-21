@@ -90,13 +90,11 @@ public class Dog_second extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(this, "Score: "+Score, Toast.LENGTH_SHORT).show();
-//            Intent i = new Intent(Dog_second.this, Quiz_activity.class);
-//            i.putExtra("result", Score);
-//            startActivity(i);
-//            Intent intentThatStartedThis = getIntent();
-//            int result = intentThatStartedThis.getIntExtra("result", 0);
-//            tvResult.setText(String.valueOf(result));
+//            Toast.makeText(this, "Score: "+Score, Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(Dog_second.this, Last_activity.class);
+            i.putExtra("Score", Score);
+            startActivity(i);
+
         }
     }
 }
