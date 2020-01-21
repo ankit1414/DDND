@@ -55,6 +55,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setTitle("Home");
         //button connections
         play = findViewById(R.id.play_button);
 

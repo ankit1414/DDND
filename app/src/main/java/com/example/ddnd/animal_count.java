@@ -24,6 +24,7 @@ public class animal_count extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal_count);
+        getSupportActionBar().setTitle("Timer Round");
         tvTotal = findViewById(R.id.tvTotal);
         btnStart = findViewById(R.id.btnStart);
         btnStop = findViewById(R.id.btnStop);
@@ -50,8 +51,10 @@ public class animal_count extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(animal_count.this , Dog_first.class);
+                circularViewWithTimer.stopTimer();
+                Intent intent = new Intent(animal_count.this , Dog_second.class);
                 startActivity(intent);
+                finish();
             }
         });
 

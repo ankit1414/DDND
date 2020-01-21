@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomTextviews">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name ="android:visibility">gone</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:text" />
+        <item name="android:textColor">#F9AA33</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/quiz_blanks</item>
+    </style>
+
+    <style name="optionTextviews">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name ="android:visibility">gone</item>
+        <item name="android:layout_width">50dp</item>
+<!--        <item name="android:layout_weight">1</item>-->
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:text" />
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/quiz_options_tvs</item>
+    </style>
+
+
+</resources>
