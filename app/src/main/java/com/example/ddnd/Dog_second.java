@@ -19,6 +19,7 @@ public class Dog_second extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dog_second);
+        getSupportActionBar().setTitle("Recalling Round");
 
         btnBruno = findViewById(R.id.btnBruno);
         btnMars = findViewById(R.id.btnMars);
@@ -94,6 +95,7 @@ public class Dog_second extends AppCompatActivity {
             Intent i = new Intent(Dog_second.this, Last_activity.class);
             i.putExtra("Score", Score);
             startActivity(i);
+            finish();
 
         }
     }

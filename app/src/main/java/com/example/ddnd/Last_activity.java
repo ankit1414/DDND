@@ -16,6 +16,7 @@ public class Last_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last_activity);
+        getSupportActionBar().setTitle("Result Screen");
         btnSubmit = findViewById(R.id.btnSubmit);
 
         Intent intentThatStartedThis = getIntent();
@@ -27,6 +28,7 @@ public class Last_activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Last_activity.this , MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

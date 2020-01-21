@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:orientation="vertical"
+    tools:context=".QuizRepeat_activity">
+
+    <ImageView
+        android:id="@+id/quiz_imageview"
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/amoebaready" />
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ans_tv1"
+            style="@style/CustomTextviews" />
+
+        <TextView
+            android:id="@+id/ans_tv2"
+            style="@style/CustomTextviews" />
+
+        <TextView
+            android:id="@+id/ans_tv3"
+            style="@style/CustomTextviews" />
+
+        <TextView
+            android:id="@+id/ans_tv4"
+            style="@style/CustomTextviews" />
+
+        <TextView
+            android:id="@+id/ans_tv5"
+            style="@style/CustomTextviews" />
+
+        <TextView
+            android:id="@+id/ans_tv6"
+            style="@style/CustomTextviews" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ans_tv7"
+            style="@style/CustomTextviews" />
+
+        <TextView
+            android:id="@+id/ans_tv8"
+            style="@style/CustomTextviews" />
+
+        <TextView
+            android:id="@+id/ans_tv9"
+            style="@style/CustomTextviews" />
+
+        <TextView
+            android:id="@+id/ans_tv10"
+            style="@style/CustomTextviews" />
+
+        <TextView
+            android:id="@+id/ans_tv11"
+            style="@style/CustomTextviews" />
+
+        <TextView
+            android:id="@+id/ans_tv12"
+            style="@style/CustomTextviews" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/playbutton_round"
+            android:text="Reset" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:id="@+id/done_button"
+            android:background="@drawable/playbutton_round"
+            android:text="Done" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/op7"
+            style="@style/optionTextviews"
+
+            />
+
+        <TextView
+            android:id="@+id/op8"
+            style="@style/optionTextviews" />
+
+        <TextView
+            android:id="@+id/op9"
+            style="@style/optionTextviews"
+
+            />
+
+        <TextView
+            android:id="@+id/op10"
+
+            style="@style/optionTextviews"
+
+            />
+
+        <TextView
+            android:id="@+id/op11"
+            style="@style/optionTextviews"
+
+            />
+
+        <TextView
+            android:id="@+id/op12"
+            style="@style/optionTextviews" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/op1"
+            style="@style/optionTextviews"
+
+            />
+
+        <TextView
+            android:id="@+id/op2"
+            style="@style/optionTextviews" />
+
+        <TextView
+            android:id="@+id/op3"
+            style="@style/optionTextviews"
+
+            />
+
+        <TextView
+            android:id="@+id/op4"
+            style="@style/optionTextviews" />
+
+        <TextView
+            android:id="@+id/op5"
+            style="@style/optionTextviews"
+
+            />
+
+        <TextView
+            android:id="@+id/op6"
+            style="@style/optionTextviews"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

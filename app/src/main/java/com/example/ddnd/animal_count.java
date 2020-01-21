@@ -52,7 +52,7 @@ public class animal_count extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 circularViewWithTimer.stopTimer();
-                Intent intent = new Intent(animal_count.this , Dog_second.class);
+                Intent intent = new Intent(animal_count.this , ClockImage .class);
                 startActivity(intent);
                 finish();
             }

@@ -20,6 +20,7 @@ public class ClockImage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clock_image);
+        getSupportActionBar().setTitle("Clock Drawing Test");
 
         btnCapture = findViewById(R.id.btnCapture);
         btnSubmit = findViewById(R.id.btnSubmit);
@@ -36,6 +37,8 @@ public class ClockImage extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(ClockImage.this,QuizRepeat_activity.class));
+                finish();
 
             }
         });

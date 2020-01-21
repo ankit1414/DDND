@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Last_activity"></activity>
-        <activity android:name=".Before_dogs">   
-        </activity>
-        <activity android:name=".ClockImage"></activity>
+        <activity android:name=".QuizRepeat_activity"></activity>
+        <activity android:name=".QuizRepeat_Activity" />
+        <activity android:name=".Last_activity" />
+        <activity android:name=".Before_dogs" />
+        <activity android:name=".ClockImage" />
         <activity android:name=".Dog_second" />
         <activity android:name=".Dog_first" />
         <activity android:name=".animal_count" />
