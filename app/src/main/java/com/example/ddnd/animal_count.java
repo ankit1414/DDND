@@ -27,6 +27,7 @@ public class animal_count extends AppCompatActivity {
         setContentView(R.layout.activity_animal_count);
         getSupportActionBar().setTitle("Timer Round");
         score = getIntent().getIntExtra("score",0);
+        Toast.makeText(getApplicationContext(),"score =" +score ,Toast.LENGTH_SHORT).show();
         tvTotal = findViewById(R.id.tvTotal);
         btnStart = findViewById(R.id.btnStart);
         btnStop = findViewById(R.id.btnStop);
