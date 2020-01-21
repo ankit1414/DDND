@@ -13,14 +13,15 @@
         android:gravity="center_horizontal"
         android:text="Now Try to remember the respective dog names. We may ask you these later."
         android:textColor="@color/colorAccent"
-        android:textSize="18sp" />
+        android:textSize="22sp" />
 
     <ImageView
         android:id="@+id/ivBruno"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="140dp"
+        android:scaleType="centerCrop"
+        android:layout_height="162dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/bruno" />
 
     <TextView
@@ -38,37 +39,41 @@
     <ImageView
 
         android:id="@+id/ivStaggy"
-        android:layout_width="220dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="310dp"
-        android:layout_marginTop="180sp"
-        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_height="163dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="200sp"
+        android:layout_marginRight="10dp"
         android:src="@drawable/staggy" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvBruno"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="65dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="75dp"
         android:text="Staggy"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="50dp" />
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="168dp"
+        android:layout_height="146dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="340dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/mars" />
 
     <TextView
         android:id="@+id/tvMars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="345dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="365dp"
         android:layout_toRightOf="@id/ivBruno"
         android:text="Mars"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
@@ -76,20 +81,34 @@
         android:textSize="50dp" />
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="310dp"
+        android:layout_width="140dp"
+        android:layout_height="152dp"
+        android:layout_marginLeft="260dp"
         android:layout_marginTop="460dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/max" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvMars"
-        android:layout_marginLeft="170dp"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="65dp"
         android:text="Max"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        android:id="@+id/proceed_button"
+        android:background="@drawable/homescreen_buttons"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"/>
 </RelativeLayout>

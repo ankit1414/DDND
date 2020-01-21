@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="Now try to remember as many as animals in 3 min and write it down on a paper. Stop the timer if you can't remember"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@color/colorAccent"
         android:textSize="20sp" />
 
     <ticker.views.com.ticker.widgets.circular.timer.view.CircularView
@@ -31,12 +31,18 @@
     <Button
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:background="@drawable/homescreen_buttons"
         android:text="Start" />
 
     <Button
         android:id="@+id/btnStop"
         android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:background="@drawable/homescreen_buttons"
         android:layout_height="wrap_content"
         android:text="Stop" />
 
@@ -45,8 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
+        android:textStyle="bold"
         android:text="How many did you get?"
-        android:textColor="@android:color/holo_blue_bright"
+        android:textColor="@color/colorPrimary"
         android:textSize="20sp" />
 
     <Button
@@ -54,23 +61,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@android:color/darker_gray"
+        android:textSize="20sp"
+        android:background="@drawable/playbutton_round"
         android:gravity="center"
         android:text="+1" />
 
     <TextView
         android:id="@+id/tvTotal"
-        android:layout_width="30dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@android:color/darker_gray"
+        android:layout_margin="10dp"
         android:gravity="center_horizontal"
-        android:text="0" />
+        android:text="0"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"/>
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/homescreen_buttons"
         android:text="Submit" />
 
 </LinearLayout>

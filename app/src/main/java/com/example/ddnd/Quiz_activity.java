@@ -29,6 +29,9 @@ public class Quiz_activity extends AppCompatActivity {
     private ArrayList<TextView> ansTextviews;
     private ArrayList<TextView> hintTextviews;
     int index = 0;
+    int score = 0;
+
+    private ArrayList<String> inputStack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,29 +41,64 @@ public class Quiz_activity extends AppCompatActivity {
         allFindViewByIds();
         makeArraylists();
         final ArrayList<QuizDataHandler> quizDataArray = quizDataset();
-        setQuizData(quizDataArray,index++);
+        setQuizData(quizDataArray,index);
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //do clean previous settings
-                // essential
-                for(int j=0; j<ansTextviews.size(); j++){
-                    hintTextviews.get(j).setText("");
-                    ansTextviews.get(j).setText("");
-                    hintTextviews.get(j).setVisibility(TextView.GONE);
-                    ansTextviews.get(j).setVisibility(TextView.GONE);
+                String correctAns = quizDataArray.get(index).getAnswer().toString();
+                if(inputStack.size() == correctAns.length()){
+                    //Toast.makeText(Quiz_activity.this,"ans ="+inputStack.toString() , Toast.LENGTH_SHORT).show();
+                    String submitedString = inputStackToString();
+                    if(submitedString.equalsIgnoreCase(correctAns)){
+                        score++;
+                        Toast.makeText(Quiz_activity.this,"correct!" , Toast.LENGTH_SHORT).show();
+                    }
+                    resetQuiz(); // safe hai
+                    if(index<quizDataArray.size()-1){
+                        setQuizData(quizDataArray,++index);
+
+                    } else {
+                        startActivity(new Intent(Quiz_activity.this,animal_count.class));
+                        finish();
+                    }
                 }
 
-                if(index<quizDataArray.size()){
-                    setQuizData(quizDataArray,index);
-                    index++;
-                } else {
-                    startActivity(new Intent(Quiz_activity.this,animal_count.class));
-                    finish();
-                }
+            }
+        });
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                index--;
+                Toast.makeText(Quiz_activity.this , "reset",Toast.LENGTH_SHORT).show();
+                resetQuiz();
+                setQuizData(quizDataArray,index);
+
             }
         });
 
+    }
+    private String inputStackToString(){
+        StringBuilder sb = new StringBuilder();
+        for(int i=0; i<inputStack.size(); i++){
+            sb.append(inputStack.get(i));
+        }
+        return sb.toString();
+    }
+    private void resetQuiz(){
+        //do clean previous settings
+        // essential
+        //clear the inputstack arraylist
+        inputStack.clear();
+        for(int j=0; j<ansTextviews.size(); j++){
+            TextView ansInstance = ansTextviews.get(j);
+            ansInstance.setText("");
+            ansInstance.setVisibility(TextView.GONE);
+            ansInstance.setBackgroundResource(R.drawable.quiz_blanks);
+
+            hintTextviews.get(j).setText("");
+            hintTextviews.get(j).setVisibility(TextView.GONE);
+
+        }
     }
 
 
@@ -76,9 +114,34 @@ public class Quiz_activity extends AppCompatActivity {
                 hintTextviews.get(j).setText(p);
                 hintTextviews.get(j).setVisibility(TextView.VISIBLE);
                 ansTextviews.get(j).setVisibility(TextView.VISIBLE);
+                attachOnClicks(hintTextviews.get(j));
             }
             //Toast.makeText(Quiz_activity.this , "jumbled ="+instance.getJumbled().toString(),Toast.LENGTH_SHORT).show();
 
+    }
+    private void attachOnClicks(final TextView temp){
+        temp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!temp.getText().toString().isEmpty()){
+                    inputStack.add(temp.getText().toString());
+                    temp.setText("");
+                    updateAnswerTiles();
+
+                }
+
+            }
+        });
+    }
+    private void updateAnswerTiles(){
+        for(int i=0; i<ansTextviews.size(); i++){
+            ansTextviews.get(i).setText("");
+            ansTextviews.get(i).setBackgroundResource(R.drawable.quiz_blanks);
+        }
+        for(int i=0; i<inputStack.size(); i++){
+            ansTextviews.get(i).setText(inputStack.get(i));
+            ansTextviews.get(i).setBackgroundResource(R.drawable.quiz_options_tvs);
+        }
     }
 
     private ArrayList<QuizDataHandler> quizDataset(){
@@ -137,6 +200,7 @@ public class Quiz_activity extends AppCompatActivity {
 
 
     private void allFindViewByIds(){
+        inputStack = new ArrayList<>();
         //answers tvs all
         otv1=findViewById(R.id.ans_tv1);
         otv2=findViewById(R.id.ans_tv2);

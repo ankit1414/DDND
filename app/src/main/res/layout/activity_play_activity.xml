@@ -5,46 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212"
-<<<<<<< HEAD
     android:layout_gravity="center"
-=======
     android:orientation="vertical"
->>>>>>> a46fad476cfd931c1212fcd57bb75650e2f51072
     tools:context=".Play_activity">
 
     <LinearLayout
 
         android:layout_width="match_parent"
-<<<<<<< HEAD
-        android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:orientation="vertical"
         android:layout_marginTop="20dp"
-        >
-=======
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
->>>>>>> a46fad476cfd931c1212fcd57bb75650e2f51072
-
+        >
         <TextView
             android:id="@+id/ques_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:text="What is your name?"
             android:textSize="35sp"
             android:layout_margin="10dp"
             android:textColor="@color/colorAccent"
-            android:id="@+id/ques_textview"
-            />
-=======
-            android:layout_margin="10dp"
-            android:text="What is your name?"
-            android:textColor="@android:color/white"
-            android:textSize="25sp" />
-
->>>>>>> a46fad476cfd931c1212fcd57bb75650e2f51072
+             />
         <EditText
             android:id="@+id/ans_edittext"
             android:layout_width="match_parent"
@@ -57,42 +38,26 @@
 
         <TextView
             android:id="@+id/dontRemember_tv"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:padding="10dp"
-<<<<<<< HEAD
             android:textSize="20sp"
-            android:id="@+id/dontRemember_tv"
             android:text="I can't remember! skip>>"
-            android:textColor="@color/colorPrimary"/>
-        <Button
+            android:textColor="@color/colorPrimary"
             android:layout_width="match_parent"
-=======
-            android:text="I can't remember! skip>>"
-            android:textColor="@android:color/holo_blue_light"
-            android:textSize="18sp" />
+            />
 
         <Button
             android:id="@+id/next_button"
-            android:layout_width="wrap_content"
->>>>>>> a46fad476cfd931c1212fcd57bb75650e2f51072
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-<<<<<<< HEAD
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:id="@+id/next_button"/>
-
-
-=======
-            android:layout_margin="100dp"
             android:background="@drawable/homescreen_buttons"
             android:text="next"
             android:textColor="@android:color/black" />
->>>>>>> a46fad476cfd931c1212fcd57bb75650e2f51072
-
 
     </LinearLayout>
 
