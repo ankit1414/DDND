@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Dog_first extends AppCompatActivity {
+    int score = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +18,10 @@ public class Dog_first extends AppCompatActivity {
         proceedbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Dog_first.this , Quiz_activity.class));
+                score = getIntent().getIntExtra("score" , 0);
+                Intent intent = new Intent(Dog_first.this , Quiz_activity.class);
+                intent.putExtra("score" , score);
+                startActivity(intent);
                 finish();
             }
         });

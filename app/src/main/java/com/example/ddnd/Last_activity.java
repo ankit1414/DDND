@@ -20,7 +20,7 @@ public class Last_activity extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btnSubmit);
 
         Intent intentThatStartedThis = getIntent();
-        int Score = intentThatStartedThis.getIntExtra("Score", 0);
+        int Score = intentThatStartedThis.getIntExtra("score", 0);
 //        tvResult.setText(String.valueOf(result));
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {

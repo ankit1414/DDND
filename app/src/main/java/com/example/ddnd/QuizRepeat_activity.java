@@ -38,6 +38,7 @@ public class QuizRepeat_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_repeat_);
         getSupportActionBar().setTitle("Quiz Round");
+        score = getIntent().getIntExtra("score",0);
         allFindViewByIds();
         makeArraylists();
         final ArrayList<QuizDataHandler> quizDataArray = quizDataset();
@@ -58,7 +59,9 @@ public class QuizRepeat_activity extends AppCompatActivity {
                         setQuizData(quizDataArray, ++index);
 
                     } else {
-                        startActivity(new Intent(QuizRepeat_activity.this, Before_dogs.class));
+                        Intent intent = new Intent(QuizRepeat_activity.this,Before_dogs.class);
+                        intent.putExtra("score" , score);
+                        startActivity(intent);
                         finish();
                     }
                 }

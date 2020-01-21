@@ -19,12 +19,14 @@ public class animal_count extends AppCompatActivity {
     TextView tvTotal;
     Button btnAdd, btnStart, btnStop ,btnSubmit;
     boolean flag = false;
+    int score =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal_count);
         getSupportActionBar().setTitle("Timer Round");
+        score = getIntent().getIntExtra("score",0);
         tvTotal = findViewById(R.id.tvTotal);
         btnStart = findViewById(R.id.btnStart);
         btnStop = findViewById(R.id.btnStop);
@@ -53,6 +55,8 @@ public class animal_count extends AppCompatActivity {
             public void onClick(View view) {
                 circularViewWithTimer.stopTimer();
                 Intent intent = new Intent(animal_count.this , ClockImage .class);
+                calcScore();
+                intent.putExtra("score" , score);
                 startActivity(intent);
                 finish();
             }
@@ -90,6 +94,14 @@ public class animal_count extends AppCompatActivity {
                         });
 
         circularViewWithTimer.setOptions(builderWithTimer);
+
+    }
+    private  void calcScore(){
+        int temp = Integer.parseInt(tvTotal.getText().toString());
+        if(temp>9 && temp<21)
+            score++;
+        else if(temp>20)
+            score+=2;
 
     }
 

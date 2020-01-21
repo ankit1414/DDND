@@ -21,6 +21,8 @@ public class Dog_second extends AppCompatActivity {
         setContentView(R.layout.activity_dog_second);
         getSupportActionBar().setTitle("Recalling Round");
 
+        Score = getIntent().getIntExtra("score",0);
+
         btnBruno = findViewById(R.id.btnBruno);
         btnMars = findViewById(R.id.btnMars);
         btnMax = findViewById(R.id.btnMax);
@@ -93,7 +95,7 @@ public class Dog_second extends AppCompatActivity {
         {
 //            Toast.makeText(this, "Score: "+Score, Toast.LENGTH_SHORT).show();
             Intent i = new Intent(Dog_second.this, Last_activity.class);
-            i.putExtra("Score", Score);
+            i.putExtra("score", Score);
             startActivity(i);
             finish();
 

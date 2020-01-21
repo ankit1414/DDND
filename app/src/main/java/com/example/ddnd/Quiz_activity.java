@@ -29,7 +29,7 @@ public class Quiz_activity extends AppCompatActivity {
     private ArrayList<TextView> ansTextviews;
     private ArrayList<TextView> hintTextviews;
     int index = 0;
-    int score = 0;
+    int score=0;
 
     private ArrayList<String> inputStack;
 
@@ -38,6 +38,9 @@ public class Quiz_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_activity);
         getSupportActionBar().setTitle("Quiz Round");
+
+        score = getIntent().getIntExtra("score",0);
+
         allFindViewByIds();
         makeArraylists();
         final ArrayList<QuizDataHandler> quizDataArray = quizDataset();
@@ -58,7 +61,9 @@ public class Quiz_activity extends AppCompatActivity {
                         setQuizData(quizDataArray,++index);
 
                     } else {
-                        startActivity(new Intent(Quiz_activity.this,animal_count.class));
+                        Intent intent = new Intent(Quiz_activity.this,animal_count.class);
+                        intent.putExtra("score" , score);
+                        startActivity(intent);
                         finish();
                     }
                 }

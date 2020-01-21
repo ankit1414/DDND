@@ -69,7 +69,10 @@ public class Play_activity extends AppCompatActivity {
                         answers.add(ans);
                         handleResponses();
                         Toast.makeText(Play_activity.this , "score = "+score , Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(Play_activity.this , Dog_first.class));
+
+                        Intent intent = new Intent(Play_activity.this , Dog_first.class);
+                        intent.putExtra("score",score);
+                        startActivity(intent);
                         finish();
                     }
 

@@ -15,12 +15,14 @@ public class ClockImage extends AppCompatActivity {
 
     Button btnCapture, btnSubmit;
     ImageView ivCamera;
+    int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clock_image);
         getSupportActionBar().setTitle("Clock Drawing Test");
+        score = getIntent().getIntExtra("score",0);
 
         btnCapture = findViewById(R.id.btnCapture);
         btnSubmit = findViewById(R.id.btnSubmit);
@@ -37,7 +39,10 @@ public class ClockImage extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ClockImage.this,QuizRepeat_activity.class));
+                calcScore();
+                Intent intent = new Intent(ClockImage.this,QuizRepeat_activity.class);
+                intent.putExtra("score",score);
+                startActivity(intent);
                 finish();
 
             }
@@ -51,5 +56,9 @@ public class ClockImage extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         Bitmap  bitmap = (Bitmap) data.getExtras().get("data");
         ivCamera.setImageBitmap(bitmap);
+    }
+
+    private  void calcScore(){
+        score = score+3;
     }
 }
