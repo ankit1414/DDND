@@ -10,6 +10,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Alzheimer's Disease"
@@ -19,6 +20,7 @@
 
     <TextView
         android:layout_width="match_parent"
+        android:gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:text="Alzheimer's disease is an irreversible, progressive brain disorder that slowly destroys memory and thinking skills and, eventually, the ability to carry out the simplest tasks."
         android:textColor="@color/colorPrimary"

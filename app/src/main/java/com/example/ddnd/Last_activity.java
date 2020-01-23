@@ -68,7 +68,7 @@ public class Last_activity extends AppCompatActivity {
 
     private void calcResult(){
 
-        if(Score > 10)
+        if(Score >= 10)
         {
             PerStart = 0;
             PerEnd = 5;
@@ -78,6 +78,10 @@ public class Last_activity extends AppCompatActivity {
             PerStart = 5;
             PerEnd = 6;
 //            perShow(Score,PerStart,PerEnd);
+        }
+        else if (Score == 8){
+            PerStart =7;
+            PerEnd = 8;
         }
         else if (Score == 7)
         {
@@ -107,13 +111,13 @@ public class Last_activity extends AppCompatActivity {
         {
             PerStart = 25;
             PerEnd = 32;
-//            perShow(Score,PerStart,PerEnd);
+//            perSho -w(Score,PerStart,PerEnd);
         }
         else if(Score ==2){
             PerStart = 33;
             PerEnd = 38;
         }
-        else{
+        else {
             PerStart = 40;
             PerEnd = 50;
         }
@@ -126,24 +130,24 @@ public class Last_activity extends AppCompatActivity {
 
     public void perShow(int score, int  PerStart, int PerEnd)
     {
-        Toast.makeText(Last_activity.this , "pershow called" , Toast.LENGTH_SHORT).show();
+//        Toast.makeText(Last_activity.this , "pershow called" , Toast.LENGTH_SHORT).show();
 
         if(score < 4)
         {
             tvPercentage.setText(PerStart + "" + " - " + PerEnd + " %");
             tvReview.setText(" Profound ");
         }
-        else if(score >= 4 && score < 5)
+        else if(score >= 4 && score <= 5)
         {
             tvPercentage.setText(PerStart + "" + " - " + PerEnd + " %");
             tvReview.setText("Critical");
         }
-        else if(score >= 6 && score < 7)
+        else if(score >= 6 && score <= 7)
         {
             tvPercentage.setText(PerStart + "" + " - " + PerEnd + " %");
             tvReview.setText("Moderate");
         }
-        else if(score >= 7 && score < 9)
+        else if(score >= 8 && score <= 9)
         {
             tvPercentage.setText(PerStart + "" + " - " + PerEnd + " %");
             tvReview.setText("Mild");
