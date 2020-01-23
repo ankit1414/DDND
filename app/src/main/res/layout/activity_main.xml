@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Alzheimer's Disease"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textColor="@color/colorAccent"
+        android:textColor="@android:color/holo_orange_light"
         android:textSize="40sp" />
 
     <TextView
@@ -46,7 +46,7 @@
         android:layout_marginTop="10dp"
         android:text="Take a digitalized test to evaluate your risks"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/colorAccent"
+        android:textColor="@android:color/white"
         android:textSize="20sp" />
 
 
