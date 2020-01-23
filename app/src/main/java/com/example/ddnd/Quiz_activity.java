@@ -61,7 +61,7 @@ public class Quiz_activity extends AppCompatActivity {
                         setQuizData(quizDataArray,++index);
 
                     } else {
-                        Intent intent = new Intent(Quiz_activity.this,animal_count.class);
+                        Intent intent = new Intent(Quiz_activity.this,Dog_first.class);
                         intent.putExtra("score" , score);
                         startActivity(intent);
                         finish();

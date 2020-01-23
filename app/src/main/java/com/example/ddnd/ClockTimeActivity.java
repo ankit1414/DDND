@@ -50,9 +50,8 @@ public class ClockTimeActivity extends AppCompatActivity {
                         setResources(index++);
                     }
                     else{
-                        index--;
                         checkResult(index);
-                        Intent intent = new Intent(ClockTimeActivity.this ,Quiz_activity.class);
+                        Intent intent = new Intent(ClockTimeActivity.this ,animal_count.class);
                         intent.putExtra("score" , score);
                         startActivity(intent);
                         finish();
@@ -61,7 +60,6 @@ public class ClockTimeActivity extends AppCompatActivity {
                 }
             }
         });
-
 
     }
 

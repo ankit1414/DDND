@@ -70,7 +70,7 @@ public class Play_activity extends AppCompatActivity {
                         handleResponses();
                         Toast.makeText(Play_activity.this , "score = "+score , Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(Play_activity.this , Dog_first.class);
+                        Intent intent = new Intent(Play_activity.this , Quiz_activity.class);
                         intent.putExtra("score",score);
                         startActivity(intent);
                         finish();
@@ -90,7 +90,7 @@ public class Play_activity extends AppCompatActivity {
         questions.add("What is your name?");
         questions.add("What date is today?");
         questions.add("What day is today?");
-//        questions.add("Which season is this?");
+        questions.add("Which season is this?");
 //        questions.add("Which city you are in?");
     }
     private void handleResponses(){
@@ -105,6 +105,16 @@ public class Play_activity extends AppCompatActivity {
         String dayOfTheWeek = new SimpleDateFormat("EEEE").format(new Date());
 
         if(answers.get(2).equalsIgnoreCase(dayOfTheWeek))
+            score++;
+        String response = answers.get(3).toLowerCase();
+        int month = Integer.parseInt(new SimpleDateFormat("MM",Locale.getDefault()).format(new Date()));
+        if(response.equalsIgnoreCase("winter") && (month == 12 || month == 1 || month == 2))
+            score++;
+        else if(response.equalsIgnoreCase("summer") && (month == 6 || month == 7 || month == 8))
+            score++;
+        else if(response.equalsIgnoreCase("spring") && (month == 3 || month == 4 || month == 5))
+            score++;
+        else if(response.equalsIgnoreCase("autumn") && (month == 9 || month == 10 || month == 11))
             score++;
 
     }

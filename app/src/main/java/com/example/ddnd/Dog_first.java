@@ -19,7 +19,7 @@ public class Dog_first extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 score = getIntent().getIntExtra("score" , 0);
-                Intent intent = new Intent(Dog_first.this , Quiz_activity.class);
+                Intent intent = new Intent(Dog_first.this , ClockTimeActivity.class);
                 intent.putExtra("score" , score);
                 startActivity(intent);
                 finish();

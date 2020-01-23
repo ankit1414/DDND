@@ -17,7 +17,7 @@ public class animal_count extends AppCompatActivity {
 
     CircularView circularViewWithTimer;
     TextView tvTotal;
-    Button btnAdd, btnStart, btnStop ,btnSubmit;
+    Button btnAdd, btnTimer,btnSubmit;
     boolean flag = false;
     int score =0;
 
@@ -29,28 +29,33 @@ public class animal_count extends AppCompatActivity {
         score = getIntent().getIntExtra("score",0);
         Toast.makeText(getApplicationContext(),"score =" +score ,Toast.LENGTH_SHORT).show();
         tvTotal = findViewById(R.id.tvTotal);
-        btnStart = findViewById(R.id.btnStart);
-        btnStop = findViewById(R.id.btnStop);
+        btnTimer = findViewById(R.id.btnTimer);
         btnAdd = findViewById(R.id.btnAdd);
         btnSubmit = findViewById(R.id.btnSubmit);
 //        etAnswer = findViewById(R.id.etAnswer);
         circularViewWithTimer = findViewById(R.id.circular_view);
 
-        btnStart.setOnClickListener(new View.OnClickListener() {
+        btnTimer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                circularViewWithTimer.startTimer();
-                flag = true;
+                if(flag == false){
+                    circularViewWithTimer.startTimer();
+                    flag = true;
+                    btnTimer.setText("Stop");
+                } else {
+                    //circularViewWithTimer.stopTimer();
+                    flag = false;
+                    btnSubmit.callOnClick();
+                }
             }
         });
 
-        btnStop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                circularViewWithTimer.stopTimer();
-                flag = false;
-            }
-        });
+//        btnStop.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
