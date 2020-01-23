@@ -4,6 +4,7 @@ public class QuizDataHandler {
 
     private int image_res;
     private StringBuilder answer;
+    private StringBuilder jumbled;
 
     public int getImage_res() {
         return image_res;
@@ -17,7 +18,6 @@ public class QuizDataHandler {
         return jumbled;
     }
 
-    private StringBuilder jumbled;
 
     public QuizDataHandler(int image_res , String answer){
         this.answer = new StringBuilder(answer);
