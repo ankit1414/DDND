@@ -153,8 +153,8 @@ public class QuizRepeat_activity extends AppCompatActivity {
 
     private ArrayList<QuizDataHandler> quizDataset() {
         ArrayList<QuizDataHandler> quizInstanceArray = new ArrayList<>();
-        quizInstanceArray.add(new QuizDataHandler(R.drawable.amoebaready, "AMOEBA"));
-        quizInstanceArray.add(new QuizDataHandler(R.drawable.harps, "HARPS"));
+        quizInstanceArray.add(new QuizDataHandler(R.drawable.amoeba1, "AMOEBA"));
+        quizInstanceArray.add(new QuizDataHandler(R.drawable.harps1, "HARPS"));
         quizInstanceArray.add(new QuizDataHandler(R.drawable.shear, "SHEAR"));
 
         //addd more here....

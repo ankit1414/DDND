@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Alzheimer's Disease"
+        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@android:color/holo_orange_light"
         android:textSize="40sp" />
@@ -24,30 +25,44 @@
         android:layout_height="wrap_content"
         android:text="Alzheimer's disease is an irreversible, progressive brain disorder that slowly destroys memory and thinking skills and, eventually, the ability to carry out the simplest tasks."
         android:textColor="@color/colorPrimary"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Symptoms:"
         android:textColor="@color/colorAccent"
-        android:textSize="20dp" />
+        android:textSize="21dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Memory loss and confusion"
         android:textColor="@color/colorPrimary"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Take a digitalized test to evaluate your risks"
+        android:text="Take a digitalized test to evaluate your risks :"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@android:color/white"
-        android:textSize="20sp" />
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="21sp" />
 
 
     <RelativeLayout
