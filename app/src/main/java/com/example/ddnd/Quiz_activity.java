@@ -115,7 +115,7 @@ public class Quiz_activity extends AppCompatActivity {
     public boolean isAlmostEqual(String a, String b)
     {
         int m = a.length(), n = b.length();
-        if(a.substring(0,2) == b.substring(0,2) && a.substring(m-2,m) == b.substring(m-2,m))
+        if(a.substring(0,2).equals(b.substring(0,2)) && a.substring(m-2,m).equals(b.substring(m-2,m)))
         {
             return true;
         }
