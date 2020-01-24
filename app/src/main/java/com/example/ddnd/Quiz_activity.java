@@ -45,6 +45,7 @@ public class Quiz_activity extends AppCompatActivity {
         makeArraylists();
         final ArrayList<QuizDataHandler> quizDataArray = quizDataset();
         setQuizData(quizDataArray,index);
+
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,9 +53,11 @@ public class Quiz_activity extends AppCompatActivity {
                 if(inputStack.size() == correctAns.length()){
                     //Toast.makeText(Quiz_activity.this,"ans ="+inputStack.toString() , Toast.LENGTH_SHORT).show();
                     String submitedString = inputStackToString();
-                    if(submitedString.equalsIgnoreCase(correctAns)){
+
+
+                    if(isAlmostEqual(submitedString,correctAns) || submitedString.equalsIgnoreCase(correctAns)){
                         score++;
-//                        Toast.makeText(Quiz_activity.this,"correct!" , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Quiz_activity.this,"correct!" , Toast.LENGTH_SHORT).show();
                     }
                     resetQuiz(); // safe hai
                     if(index<quizDataArray.size()-1){
@@ -70,6 +73,7 @@ public class Quiz_activity extends AppCompatActivity {
 
             }
         });
+
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +86,8 @@ public class Quiz_activity extends AppCompatActivity {
         });
 
     }
+
+
     private String inputStackToString(){
         StringBuilder sb = new StringBuilder();
         for(int i=0; i<inputStack.size(); i++){
@@ -106,6 +112,15 @@ public class Quiz_activity extends AppCompatActivity {
         }
     }
 
+    public boolean isAlmostEqual(String a, String b)
+    {
+        int m = a.length(), n = b.length();
+        if(a.substring(0,2) == b.substring(0,2) && a.substring(m-2,m) == b.substring(m-2,m))
+        {
+            return true;
+        }
+        return false;
+    }
 
     private void setQuizData(ArrayList<QuizDataHandler> quizDataArray , int pos){
 
@@ -138,6 +153,7 @@ public class Quiz_activity extends AppCompatActivity {
             }
         });
     }
+
     private void updateAnswerTiles(){
         for(int i=0; i<ansTextviews.size(); i++){
             ansTextviews.get(i).setText("");
