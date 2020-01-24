@@ -17,8 +17,7 @@ public class Before_dogs extends AppCompatActivity {
         setContentView(R.layout.activity_before_dogs);
         getSupportActionBar().setTitle("Information");
         score = getIntent().getIntExtra("score" , 0);
-        Toast.makeText(getApplicationContext(),"score =" +score ,Toast.LENGTH_SHORT).show();
-
+//        Toast.makeText(getApplicationContext(),"score =" +score ,Toast.LENGTH_SHORT).show();
         Button btnSubmit = findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -27,7 +27,7 @@ public class animal_count extends AppCompatActivity {
         setContentView(R.layout.activity_animal_count);
         getSupportActionBar().setTitle("Timer Round");
         score = getIntent().getIntExtra("score",0);
-        Toast.makeText(getApplicationContext(),"score =" +score ,Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(),"score =" +score ,Toast.LENGTH_SHORT).show();
         tvTotal = findViewById(R.id.tvTotal);
         btnTimer = findViewById(R.id.btnTimer);
         btnAdd = findViewById(R.id.btnAdd);
@@ -43,19 +43,14 @@ public class animal_count extends AppCompatActivity {
                     flag = true;
                     btnTimer.setText("Stop");
                 } else {
-                    //circularViewWithTimer.stopTimer();
+                    circularViewWithTimer.stopTimer();
                     flag = false;
-                    btnSubmit.callOnClick();
+//                    btnSubmit.callOnClick();
                 }
             }
         });
 
-//        btnStop.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
+
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
