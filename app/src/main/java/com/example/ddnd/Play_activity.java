@@ -68,7 +68,7 @@ public class Play_activity extends AppCompatActivity {
                         String ans = answer_et.getText().toString().trim();
                         answers.add(ans);
                         handleResponses();
-                        Toast.makeText(Play_activity.this , "score = "+score , Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(Play_activity.this , "score = "+score , Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(Play_activity.this , Quiz_activity.class);
                         intent.putExtra("score",score);

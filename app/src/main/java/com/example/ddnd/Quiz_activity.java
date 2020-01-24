@@ -54,7 +54,7 @@ public class Quiz_activity extends AppCompatActivity {
                     String submitedString = inputStackToString();
                     if(submitedString.equalsIgnoreCase(correctAns)){
                         score++;
-                        Toast.makeText(Quiz_activity.this,"correct!" , Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(Quiz_activity.this,"correct!" , Toast.LENGTH_SHORT).show();
                     }
                     resetQuiz(); // safe hai
                     if(index<quizDataArray.size()-1){
@@ -163,9 +163,6 @@ public class Quiz_activity extends AppCompatActivity {
     }
 
 
-
-
-
     private void makeArraylists(){
         //ans
         ansTextviews = new ArrayList<>();
@@ -198,9 +195,6 @@ public class Quiz_activity extends AppCompatActivity {
         hintTextviews.add(thtv6);
 
     }
-
-
-
 
 
 
